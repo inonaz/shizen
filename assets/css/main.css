@@ -1,6 +1,6 @@
 :root {
   /* Typography */
-  --spacing-base: 1.5em;
+  --spacing-base: 1.7em;
   --font-family-mono: monospace;
   --font-size-base: 1.2em;
   --font-size-small: 0.9em;
@@ -626,6 +626,148 @@ blockquote > :last-child {
   h4,
   h5 {
     page-break-after: avoid;
+  }
+}
+
+/* Newsletter subscription form */
+
+/* ----------  block ---------- */
+.newsletter-subscribe-form {
+
+  margin-top: var(--spacing-xs);
+  padding-top: var(--spacing-lg);
+
+}
+
+@media (max-width: 700px) {
+  .newsletter-subscribe-form {
+    margin: 2rem 0;
+    padding: 1.5rem;
+  }
+}
+
+/* ----------  form ---------- */
+.newsletter-subscribe-form form {          /* targets <form class="embeddable-buttondown-form"> */
+  display: grid;
+  align-items: center;
+  margin: var(--spacing-base) 0;
+  padding: var(--spacing-sm) var(--spacing-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--pre-border-radius);
+  background: var(--color-bg-secondary);
+  box-shadow: 0 1px 2px 0 var(--color-border);
+}
+
+@media (max-width: 700px) {
+  .newsletter-subscribe-form form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: .95rem;
+  }
+}
+
+/* ----------  label ---------- */
+.newsletter-subscribe-form form label {
+
+  flex-shrink: 0;
+  font-weight: 400;
+  font-size: var(--font-size-base);
+  line-height: 1;
+  white-space: normal;
+}
+
+@media (max-width: 700px) {
+  .newsletter-subscribe-form form label {
+    margin-bottom: .5rem;
+    font-size: var(--font-size-small);
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* ----------  input wrapper (optional) ---------- */
+.newsletter-subscribe-form .form-inputs {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  flex-shrink: 0;
+
+}
+
+@media (max-width: 700px) {
+  .newsletter-subscribe-form .form-inputs {
+    gap: .5rem;
+  }
+}
+
+/* ----------  email field ---------- */
+.newsletter-subscribe-form input[type=email] {
+  min-width: 200px;
+  margin: 0;
+  padding: .75rem 1rem;
+  border: 1px solid var(--blue);
+  border-radius: 4px;
+  background: white;
+  color: black;
+  font-family: inherit;
+  font-size: var(--font-size-small);
+  box-sizing: border-box;
+  transition: border-color .2s ease, box-shadow .2s ease;
+  display: grid;
+  align-items: center;
+}
+
+.newsletter-subscribe-form input[type=email]:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+.newsletter-subscribe-form input[type=email]::placeholder {
+  color: var(--black);
+}
+
+@media (max-width: 700px) {
+  .newsletter-subscribe-form input[type=email] {
+    display: grid;
+    flex: 1;
+    min-width: 120px;
+    padding: .6rem .8rem;
+    font-size: var(--font-size-small);
+    flex-direction: column;
+  }
+}
+
+/* ----------  submit button ---------- */
+.newsletter-subscribe-form input[type=submit] {
+  display: grid;
+  align-items: center;
+  padding: .75rem 1.5rem;
+  border: 1px solid white;
+  border-radius: 4px;
+  background: var(--blue);
+  color: var( --color-text-primary);
+  font-family: inherit;
+  font-size: var(--font-size-small);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: none;
+}
+
+.newsletter-subscribe-form input[type=submit]:hover {
+  transform: translateY(-1px);
+}
+
+.newsletter-subscribe-form input[type=submit]:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 700px) {
+  .newsletter-subscribe-form input[type=submit] {
+    display: grid;
+    padding: .6rem 1rem;
+    font-size: 75%;
+    white-space: nowrap;
+    flex-direction: column;
   }
 }
 
