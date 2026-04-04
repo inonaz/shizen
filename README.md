@@ -64,7 +64,7 @@ Table of contents:
 ### As a Git Submodule
 
 ```bash
-git submodule add https://github.com/inonaz/shibui.git themes/shibui
+git submodule add https://github.com/inonaz/shizen.git themes/shizen
 git submodule update --init --recursive
 ```
 
