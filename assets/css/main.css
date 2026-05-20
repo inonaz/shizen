@@ -336,14 +336,14 @@ h5 > code {
   margin-bottom: var(--spacing-base);
 }
 
+
+
 .back-link {
   color: var(--color-text-muted);
-  border-bottom: none;
 }
 
 .back-link:hover {
   color: var(--color-text-primary);
-  text-decoration: none;
 }
 
 /* Time list */

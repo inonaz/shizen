@@ -61,9 +61,9 @@
 
       <div class="back-nav">
         {{ with .Parent }}
-          <a href="{{ .RelPermalink }}" class="back-link">../</a>
+          <a href="{{ .RelPermalink }}" class="back-link">/ archives</a>
         {{ else }}
-          <a href="{{ "/" | relURL }}" class="back-link">../</a>
+          <a href="{{ "/" | relURL }}" class="back-link">/ archives</a>
         {{ end }}
       </div>
     </div>
